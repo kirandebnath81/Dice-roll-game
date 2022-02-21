@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(139, 136, 136);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+:root {
+  --game-color: rgb(0, 0, 65);
+}
+
+/* APP Section */
+
+/* Game Text Section */
+.roll {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.recordText {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  color: var(--game-color);
+  font-weight: bold;
+}
+
+.recordText span {
+  font-size: 2.2rem;
+  color: rgb(0, 0, 0);
+}
+.recordRoll {
+  font-size: 1.5rem;
+  color: var(--game-color);
+  font-weight: bold;
+}
+
+.recordRoll span {
+  font-size: 3rem;
+  color: black;
+}
+
+.currentRoll {
+  font-size: 1.8rem;
+  margin-top: 10px;
+  color: var(--game-color);
+}
+
+.currentRoll span {
+  font-size: 3.5rem;
+}
+
+/* Game Buttons Section */
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+.gameBtn {
+  border-radius: 5px;
+  border: none;
+  font-size: 1.4rem;
+  width: 160px;
+  height: 50px;
+  padding: 5px;
+  font-weight: bold;
+  color: rgb(241, 236, 255);
+  box-shadow: rgb(71, 71, 71) 2px 5px 10px -1px;
+}
+.rollBtn {
+  margin-right: 20px;
+  background-color: rgb(0, 0, 0);
+}
+.submitBtn {
+  background-color: rgb(7, 7, 160);
+}
+
+.rollBtn:hover {
+  background-color: rgb(5, 5, 49);
+}
+
+.submitBtn:hover {
+  background-color: rgb(25, 25, 255);
+}
+
+/* Game Section */
+
+.gameContainer {
+  width: 460px;
+  margin: 25px auto 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(3, 75px);
+  grid-gap: 20px;
+}
+
+.game {
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--game-color);
+  color: white;
+  font-size: 1.4rem;
+  box-shadow: rgb(71, 71, 71) 2px 5px 10px -1px;
+}
+
+.game:hover {
+  background-color: rgb(0, 0, 0);
+  font-size: 1.7rem;
+}
+
+/* GameInfo Section */
+
+.introtext {
+  text-align: center;
+  margin-top: 5px;
+  color: var(--game-color);
+}
+.introtext h1 {
+  font-size: 4rem;
+}
+
+.introtext p {
+  width: 420px;
+  margin: 0px auto;
+  margin-top: 15px;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+
+.nameInput {
+  display: block;
+  margin: 15px auto;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  text-indent: 15px;
+  font-size: 1.1rem;
+  box-shadow: rgb(71, 71, 71) 2px 5px 10px -1px;
+}
+
+.startBtn {
+  display: block;
+  margin: 0px auto;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+  background-color: black;
+  color: white;
+  box-shadow: rgb(71, 71, 71) 2px 5px 10px -1px;
+  font-weight: bold;
+}
+.startBtn:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Responsive site for phone */
+
+@media screen and (max-width: 420px) {
+  /* Game Text Section */
+
+  .recordText {
+    font-size: 1.2rem;
+  }
+
+  .recordText span {
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+  }
+
+  /* Game section */
+  .gameContainer {
+    width: 300px;
+    margin: 20px auto;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: repeat(3, 50px);
+  }
+
+  /* Game Info */
+
+  .introtext p {
+    width: 370px;
+    margin: 0px auto;
+    margin-top: 20px;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  /* Game Btn */
+  .gameBtn {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    width: 140px;
+    height: 45px;
+  }
+}
