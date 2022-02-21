@@ -14,6 +14,10 @@ body {
 
 /* APP Section */
 
+.container{
+  margin-top: 100px;
+}
+
 /* Game Text Section */
 .roll {
   margin-top: 10px;
@@ -178,7 +182,7 @@ body {
   /* Game section */
   .gameContainer {
     width: 300px;
-    margin: 20px auto;
+    margin: 35px auto;
     grid-template-columns: repeat(4, 60px);
     grid-template-rows: repeat(3, 50px);
   }

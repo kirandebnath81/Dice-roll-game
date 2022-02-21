@@ -37,8 +37,6 @@ export default function App() {
   const allNumStop = gameData.every((game) => game.stop === true);
   const allNumMatch = gameData.every((game) => game.num === gameData[0].num);
 
-  console.log(allNumMatch);
-
   const showInfo = () => setShowGameInfo((prevState) => !prevState);
   const getName = (event) => setUserName(event.target.value);
 
@@ -81,33 +79,28 @@ export default function App() {
   };
 
   const submit = () => {
+    console.log(savedRoll);
     if (allNumStop) {
-      setCurrentRoll(0);
-
       if (allNumMatch) {
         setTotalRoll(currentRoll);
         toast.success("Hurrah , you have Matched the dice", {
           theme: "colored",
         });
 
-        if (savedRoll === 0) {
-          return toast.success("Congratulation you have created the  record", {
-            theme: "dark",
-          });
-        } else if (savedRoll > totalRoll) {
-          return toast.success("Congratulation you have created new record", {
+        if (savedRoll === 0 || currentRoll < savedRoll) {
+          toast.success("Congratulation you have created new record", {
             theme: "dark",
           });
         } else {
-          return toast.error(
-            "But,you couldn't break the record , better luck next time",
+          toast.error(
+            "But,you couldn't break the record, Better luck next time",
             {
               theme: "dark",
             }
           );
         }
       } else {
-        return toast.error("Opps,dice is not mathched", { theme: "colored" });
+        toast.error("Opps,dice is not mathched", { theme: "colored" });
       }
     }
   };
